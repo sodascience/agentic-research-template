@@ -26,6 +26,16 @@ The research purpose will be recorded in `project_brief.md`. If it does not yet 
 
 These instructions do not enforce access restrictions. Actual permissions are configured separately.
 
+## Software environment
+
+- Before installing software, inspect the project's environment files and available tools. Use an existing suitable environment where possible.
+- Follow the project's declared language versions and dependencies. Do not introduce a version requirement without explaining why it is needed.
+- Establish where commands actually execute: the researcher's computer, a local virtual machine, or a cloud environment. Record the operating system, language version, dependencies, and run commands in `README.md`. Report uncertainty rather than assuming that file access implies execution on the same system.
+- Approved software download sources: [specify package registries and any language-runtime distribution sources]. Ask before downloading from unlisted sources. Software-download permission does not authorise uploading research data or override environment access controls.
+- Keep installed environments out of Git. Preserve dependency specifications and lockfiles where applicable, and use the project environment consistently for analysis and checks.
+- Do not reuse an installed environment across incompatible operating systems. When files are shared between the host and a virtual machine, keep their installed environments separate; do not overwrite the researcher's environment.
+- Report where verification ran. Execution in a virtual machine does not also verify the researcher's local setup. Document any local rerun still needed.
+
 ## Verification and reporting
 
 - Check each implemented step against its agreed requirements, including substantive correctness.
