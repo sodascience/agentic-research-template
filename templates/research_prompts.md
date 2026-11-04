@@ -13,7 +13,7 @@ See the [setup instructions](../README.md#using-different-agents) for folder-lin
 ## Brief and working instructions
 
 ```text
-Use $develop-research-plan to help me develop project_brief.md.
+Use $develop-research-plan to help me develop docs/project_brief.md.
 My initial idea is [idea], intended output is [output or undecided], and
 available time is [time]. Documentation is at [location or not yet available].
 Start with focused questions; do not inspect record-level data or write
@@ -24,7 +24,7 @@ Stop after the brief.
 After agreeing the brief:
 
 ```text
-Read project_brief.md and help me adapt AGENTS.md. Ask about unresolved
+Read docs/project_brief.md and help me adapt AGENTS.md. Ask about unresolved
 permissions, file locations, and researcher decision points. Present proposed
 changes before saving them; retain the explicit-request commit policy.
 ```
@@ -32,7 +32,7 @@ changes before saving them; retain the explicit-request commit policy.
 ## Study design
 
 ```text
-Use $develop-research-plan to co-create study_design.md from the agreed brief
+Use $develop-research-plan to co-create docs/study_design.md from the agreed brief
 and available documentation. Discuss consequential choices and relevant
 limitations with me. Save the design after agreement; do not plan or code yet.
 ```
@@ -40,7 +40,7 @@ limitations with me. Save the design after agreement; do not plan or code yet.
 ## Implementation plan
 
 ```text
-Use $develop-research-plan to create implementation_plan.md from our agreed
+Use $develop-research-plan to create docs/implementation_plan.md from our agreed
 study design. Include manageable units, specific checks, decision points,
 and final rerun requirements. Present it for agreement before saving.
 Do not implement yet.

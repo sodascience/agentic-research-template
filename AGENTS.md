@@ -4,7 +4,7 @@ These are starter working instructions. Adapt the project-specific details after
 
 ## Purpose and project documents
 
-The research purpose will be recorded in `project_brief.md`. If it does not yet exist, help the researcher develop it before beginning analysis. When available, read `study_design.md` for methodological decisions and `implementation_plan.md` for the current tasks and checks. Report missing or conflicting instructions rather than inventing decisions.
+The research purpose will be recorded in `docs/project_brief.md`. If it does not yet exist, help the researcher develop it before beginning analysis. When available, read `docs/study_design.md` for methodological decisions and `docs/implementation_plan.md` for the current tasks and checks. Report missing or conflicting instructions rather than inventing decisions.
 
 ## Working with the researcher
 
@@ -47,8 +47,8 @@ These instructions do not enforce access restrictions. Shared defaults are in `.
 
 Record enough to understand decisions, inspect evidence, and reproduce the analysis. Update the existing documents rather than creating a separate log for every task.
 
-- `study_design.md`: consequential methodological decisions, their rationale, assumptions, and unresolved research questions. Reflect changes to project scope in `project_brief.md`.
-- `implementation_plan.md`: step completion, checks run and their results, failures, and unresolved implementation issues.
+- `docs/study_design.md`: consequential methodological decisions, their rationale, assumptions, and unresolved research questions. Reflect changes to project scope in `docs/project_brief.md`.
+- `docs/implementation_plan.md`: step completion, checks run and their results, failures, and unresolved implementation issues.
 - `README.md`: input versions and locations, software requirements, and commands needed to rerun the analysis.
 - In a short AI-use section of `README.md`, record the tasks assisted by AI, the extent of automation, and what the researcher reviewed. Record the provider, model identifier/version, access date, and application or API used, where available. Note relevant configuration, customisation, and whether persistent memory or previous conversation context was used. Mark unavailable details as unknown; do not guess.
 - Preserve the versions of project instructions, skills, and substantive prompts used. Reference existing files and Git revisions rather than duplicating them. For complex agent interactions, document the workflow, configuration, and relevant code when a complete prompt record is impractical.

@@ -2,7 +2,7 @@
 
 Status: Draft / Agreed / Needs revision · Date: [YYYY-MM-DD]
 
-Based on `study_design.md`. Define manageable steps with observable outputs and checks. Include no implementation code. Do not resolve open methodological questions silently.
+Based on `docs/study_design.md`. Define manageable steps with observable outputs and checks. Include no implementation code. Do not resolve open methodological questions silently.
 
 ## 1. Project overview
 

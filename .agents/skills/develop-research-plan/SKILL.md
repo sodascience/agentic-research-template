@@ -25,4 +25,4 @@ For the design, use relevant sections rather than forcing every study into a qua
 
 Present a draft for review. Label provisional decisions, what would resolve them, and which work they block. Do not invent permissions, dataset properties, results, or completion evidence.
 
-After researcher agreement, save the requested document in the research project's root using its template filename, with status, date, and conditions. Remove unused guidance and explain substantive inapplicable items. Preserve unrelated content when revising. Stop at the agreed stage; do not begin analysis or commit without instruction.
+After researcher agreement, save the requested document in the research project's `docs/` folder using its template filename, with status, date, and conditions. Remove unused guidance and explain substantive inapplicable items. Preserve unrelated content when revising. Stop at the agreed stage; do not begin analysis or commit without instruction.
