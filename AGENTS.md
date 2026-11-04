@@ -18,13 +18,14 @@ The research purpose will be recorded in `project_brief.md`. If it does not yet 
 
 ## Files and access
 
-- Inputs and documentation: [locations]. Treat source data as read-only.
+- Original inputs: `data/raw/`; derived datasets: `data/processed/`; source and access documentation: `data/README.md`. Treat original inputs as read-only. Document inputs held elsewhere.
 - When suitable synthetic data are supplied, develop and check scripts using them first. Access real or sensitive data only when explicitly authorised and within the approved environment. Synthetic-data checks do not replace validation on real data.
-- Analysis code: [agree location when needed]. Generated outputs: [agree location when needed].
+- Keep numbered analysis notebooks in the project root, reusable code in `src/`, figures in `results/figures/`, and tables in `results/tables/`. Add a project-named package under `src/` if needed. Run analysis from the project root and document commands in `README.md`.
+- Data, outputs, and settings are trackable by default. Before staging, inspect intended files, including notebook outputs and local settings, for sensitive information, credentials, personal paths, and large files. Do not commit sensitive or large datasets.
 - Permitted data and services: [specify]. Do not upload data or use external services without authorisation.
 - Do not delete existing work, publish results, or push changes without explicit instruction.
 
-These instructions do not enforce access restrictions. Actual permissions are configured separately.
+These instructions do not enforce access restrictions. Shared defaults are in `.claude/settings.json` and `.codex/config.toml`; see `docs/permissions.md` for setup and checks. Internet access is enabled, but this does not authorise sharing data or using services.
 
 ## Software environment
 
@@ -32,7 +33,7 @@ These instructions do not enforce access restrictions. Actual permissions are co
 - Follow the project's declared language versions and dependencies. Do not introduce a version requirement without explaining why it is needed.
 - Establish where commands actually execute: the researcher's computer, a local virtual machine, or a cloud environment. Record the operating system, language version, dependencies, and run commands in `README.md`. Report uncertainty rather than assuming that file access implies execution on the same system.
 - Approved software download sources: [specify package registries and any language-runtime distribution sources]. Ask before downloading from unlisted sources. Software-download permission does not authorise uploading research data or override environment access controls.
-- Keep installed environments out of Git. Preserve dependency specifications and lockfiles where applicable, and use the project environment consistently for analysis and checks.
+- Keep installed environments out of Git. Record dependencies and versions using files suited to the chosen language, such as `pyproject.toml` with a lockfile, `requirements.txt`, or `renv.lock`. Do not use `environment.yml`. Use the project environment consistently for analysis and checks.
 - Do not reuse an installed environment across incompatible operating systems. When files are shared between the host and a virtual machine, keep their installed environments separate; do not overwrite the researcher's environment.
 - Report where verification ran. Execution in a virtual machine does not also verify the researcher's local setup. Document any local rerun still needed.
 
@@ -61,5 +62,6 @@ This guidance draws on [Feuerriegel et al. (2026), GUIDE-LLM, Table 1 and practi
 ## Git checkpoints
 
 - Create commits only when explicitly requested. Permission to edit or verify files does not imply permission to commit or push.
+- Follow SoDa GitHub Flow: work on a short-lived branch such as `feature/short-name` and propose changes to `main` through a pull request. Use Conventional Commits (`feat:`, `fix:`, `docs:`, or `chore:`) with concise, imperative titles.
 - When asked to commit, group changes by purpose and commit them separately in a logical order. Keep relevant verification with each change; avoid splitting closely related work unnecessarily.
 - Review and stage only the intended changes. Preserve unrelated work and report any verification that remains incomplete.

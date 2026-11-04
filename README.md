@@ -5,7 +5,7 @@ A reusable starting point for researcher-led work with an AI agent. Use it to de
 ## Start a research project
 
 1. On GitHub, choose **Use this template → Create a new repository**, then open your new repository locally. You can also copy these files into a new local Git repository.
-2. Review `AGENTS.md` and configure actual file, network, and execution permissions in your AI tool. Written instructions do not enforce access restrictions. Check what information may be shared before supplying data or documentation.
+2. Review `AGENTS.md`, then follow [permission setup and checks](docs/permissions.md). Shared settings enable internet and temporary-file access while restricting access to other personal files. Check what information may be shared before supplying data or documentation.
 3. Make permitted data documentation available. Add datasets only when needed; decide what may be tracked or shared before staging files. Use suitable synthetic data first when available. Do not assume real data may be accessed because the scripts worked on synthetic data.
 4. Start the project-brief discussion using the prompt below. Adapt `AGENTS.md` after agreeing the brief, then develop the study design. Keep substantive choices with the researcher.
 
@@ -37,8 +37,23 @@ Keep the rest of the task request. These explicit file-reading requests do not r
 
 ## Where things belong
 
+This follows the [SoDa research layout](https://github.com/sodascience/Github_Manifest/blob/main/GitHub-guidelines-draft.md#2-folder-structure), with notebooks in the project root rather than a `notebooks/` folder.
+
+| Location | Purpose |
+|---|---|
+| Project root | Numbered analysis notebooks (`01_exploration.ipynb`, `.qmd`, or notebook-style `.py`) and agreed research documents. |
+| [`data/`](data/README.md) | Original inputs in `raw/`, derived datasets in `processed/`, and source and access documentation in `README.md`. |
+| `src/` | Reusable code; add a project-named package when needed. |
+| `results/figures/` | Generated figures. |
+| `results/tables/` | Generated tables. |
+
+Run analysis from the project root. Data, results, and shared settings are trackable by default; review for sensitive information, credentials, and large files before staging. Keep original inputs unchanged. Record dependencies and versions using language-appropriate files such as `pyproject.toml` and a lockfile, `requirements.txt`, or `renv.lock`; do not use `environment.yml`.
+
+The remaining files support the agent workflow:
+
 | File or folder | Purpose |
 |---|---|
+| [Permission settings](docs/permissions.md) | Shared Claude Code and Codex defaults, setup, and verification. |
 | `.claude/skills` | Folder link to the shared skills for Claude Code discovery. |
 | [CLAUDE.md](CLAUDE.md) | Imports the shared working instructions for Claude Code. |
 | [AGENTS.md](AGENTS.md) | Default working rules, permissions to clarify, verification, records, and commit policy. Adapt for your project. |
@@ -47,7 +62,7 @@ Keep the rest of the task request. These explicit file-reading requests do not r
 | [Bundled templates](.agents/skills/develop-research-plan/assets/templates/) | Authoritative blank document structures; no duplicate copies are needed. |
 | [Implementation skill](.agents/skills/implement-and-verify/SKILL.md) | Guidance for implementation, verification, bug fixes, and final review. |
 
-Save completed `project_brief.md`, `study_design.md`, and `implementation_plan.md` in the project root as each stage is agreed. Leave unknowns explicit. Add analysis folders and software dependencies when the plan needs them. Replace this README's starter guidance with project-specific setup, input versions, run instructions, and AI-use records as the project develops.
+Save completed `project_brief.md`, `study_design.md`, and `implementation_plan.md` in the project root as each stage is agreed. Leave unknowns explicit. Use the default folders and add software dependencies when the plan needs them. Replace this README's starter guidance with project-specific setup, input versions, run instructions, and AI-use records as the project develops.
 
 ## Recommended chats
 
