@@ -1,36 +1,47 @@
-# Agent permissions
+# What can the AI agent access?
 
-The shared settings let the agent edit project files, use temporary files, and reach the public internet. They restrict access to other personal files and prevent requests to retry shell commands outside the sandbox. They are editable project defaults, not an organisation-enforced policy.
+This template includes settings for Claude Code and Codex. They let the agent work on your project while limiting access to other files on your computer.
 
-`AGENTS.md` describes how to work. Settings control what the tools can access. Neither permission to connect to the internet nor permission to read a file authorises uploading its contents.
+With these settings, the agent can:
 
-## Claude Code
+- Read and edit files in the project folder.
+- Run analysis code and use temporary files.
+- Access the internet, for example to download packages or public data.
 
-The project settings are in [`.claude/settings.json`](../.claude/settings.json). They enable the sandbox, block reads outside working directories, disable unsandboxed retries, and require the sandbox to be available. Public internet domains are allowed with `allowedDomains: ["*"]`; existing deny rules and managed restrictions still apply. Temporary files remain available under Claude Code's normal sandbox rules.
+Access to unrelated personal files is restricted, with exceptions for software and temporary files needed to run commands. Commands run inside a **sandbox**: a restricted environment that limits what they can access. A blocked command cannot be retried outside it.
 
-Use a current Claude Code release: `blockReadsOutsideWorkingDirectories` requires v2.1.257 or later. The sandbox supports macOS, Linux, and WSL2. On native Windows, use WSL2; with `failIfUnavailable` enabled, an unsupported setup cannot silently fall back to unsandboxed execution. Linux and WSL2 require sandbox dependencies, including bubblewrap and socat.
+`AGENTS.md` gives the agent working instructions. The settings apply access restrictions. You can change these defaults; they do not replace your institution's requirements.
 
-Start Claude Code in the repository and accept workspace trust after reviewing its files. Use `/sandbox` to inspect the effective sandbox. If an interpreter, library, or external data directory is blocked, grant only the needed access through your personal settings or session controls. Do not disable the sandbox to fix a setup problem.
+## Getting started
 
-## Codex
+Open the project folder in your agent and review its files before accepting any request to trust the project. The settings are already included:
 
-The project settings are in [`.codex/config.toml`](../.codex/config.toml). Codex loads them only after you trust the project. They extend `:workspace`, deny reads elsewhere except Codex's minimal runtime paths, and explicitly allow system temporary directories. Interpreters or libraries installed elsewhere may need additional read access.
+| Agent | Settings file | How to check |
+|---|---|---|
+| Claude Code | [`.claude/settings.json`](../.claude/settings.json) | Type `/sandbox` to check that the sandbox is enabled. |
+| Codex | [`.codex/config.toml`](../.codex/config.toml) | Type `/status` to inspect permissions. Codex loads project settings only after you trust the project. |
 
-`approval_policy = "never"` means blocked actions fail instead of requesting an exception. Network access is enabled for shell commands. This file does not enable Codex's network proxy, so command network access is unrestricted unless another configuration layer supplies restrictions. Web search, apps, and MCP connections have separate controls.
+Use an up-to-date version. Claude Code needs version 2.1.257 or later for the file-read restriction. Its sandbox works on macOS, Linux, and Windows through WSL2 (a Linux environment for Windows). If the sandbox is unavailable, these settings stop Claude Code rather than letting commands run without it.
 
-Permission profiles are beta; use a current Codex release that supports them. Start with `codex --strict-config` to reject unknown keys. Run `/status` and `/debug-config` to inspect effective permissions and configuration sources. Older `sandbox_mode` or `sandbox_workspace_write` settings, including command-line `--sandbox`, can take precedence over this profile; resolve conflicts before relying on it. Do not replace your global configuration with this file.
+## Try it before adding research data
 
-## Check before using research data
+Start a new session and ask the agent to:
 
-In a fresh session, use harmless test files to check that:
+1. Read the project README and create a small test file in the project.
+2. Run a simple R or Python calculation and create a temporary file.
+3. Download a public webpage using code.
+4. Try reading a harmless test file you placed outside the project, in another personal folder. This should be blocked. Ask it to try both its file-reading tool, if available, and a command.
 
-1. The agent can read a project file and create and remove a disposable project output.
-2. A short Python or R calculation runs and can create and remove a temporary file.
-3. A request to a public documentation site succeeds from a shell command.
-4. Reading a harmless file you created in an unrelated personal folder is blocked. Test both the agent's file tools, if available, and a shell command. Never use a real secret for this check.
+Use a dummy file for the last check, never a real confidential document. Do not grant access to that folder during the test. Ask the agent to report what worked, what was blocked, and what it could not check, then remove the test files.
 
-Do not add that outside folder to the working directories during the check. A failure must stay blocked, without an unsandboxed retry. Record the application version, operating system, results, and any untested controls. The two tools have different boundaries; passing one test does not establish that every tool or connector is confined.
+If something fails, ask the agent to explain why before changing permissions. An R library or Python installation may need access to a specific location. Grant only the access needed. Existing personal or institutional settings can override these defaults; ask for help checking them rather than turning off the restrictions.
 
-Data and settings are not ignored by default. Review what you stage; add project-specific exclusions when there is a concrete reason. Clearing notebook outputs may be needed before sharing. Keep credentials out of Git; `.env` files remain ignored for this reason.
+## Before sharing files
 
-See the official [Claude Code sandbox documentation](https://code.claude.com/docs/en/sandboxing), [Claude Code settings reference](https://code.claude.com/docs/en/settings-reference), and [Codex permission profiles](https://learn.chatgpt.com/docs/permissions). Managed or hosted environments may enforce different permissions; check their controls rather than assuming these local settings apply.
+Internet access does not mean you have permission to upload research data. Only provide data to AI services when your project's agreements and institutional rules allow it. Files the agent reads may be sent to its AI provider.
+
+Data and settings can be included in Git by default. Review them, including saved notebook outputs, before committing or sharing. Keep sensitive or large datasets and passwords or API keys out of Git. Files named `.env`, commonly used for credentials, are already excluded.
+
+These settings concern local commands and file access. Connected services and browser tools have separate permissions. Cloud versions of the agents may also use different settings, so check their access controls separately.
+
+For technical details, see the [Claude Code documentation](https://code.claude.com/docs/en/sandboxing) and [Codex documentation](https://learn.chatgpt.com/docs/permissions).
