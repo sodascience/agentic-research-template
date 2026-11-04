@@ -8,7 +8,7 @@ Replace bracketed fields. These prompts select a stage; the skills provide the d
 - **Claude Code:** replace them with `/develop-research-plan` and `/implement-and-verify`. The repository's `.claude/skills` link provides discovery.
 - **Explicit-reading fallback:** replace `Use $develop-research-plan` with “Read AGENTS.md and .agents/skills/develop-research-plan/SKILL.md and follow that guidance”. For the other skill, substitute `.agents/skills/implement-and-verify/SKILL.md`. Keep the remainder of the request. This works with file-capable agents even without skill discovery.
 
-See the [setup instructions](../README.md#using-different-agents) for folder-link limitations and tools without local file access. Use the resume prompt when starting a new chat. The [recommended chat sequence](../README.md#recommended-chats) is a flexible default.
+Start with the [setup instructions](../README.md#getting-started). If the Claude Code skills link does not work, use the explicit-reading fallback above. Save planning documents in `docs/`; read and run project files from the project root. The [chat suggestions](../README.md#organising-your-chats) are a flexible default. Use the resume prompt when starting a new chat.
 
 ## Brief and working instructions
 
@@ -68,7 +68,8 @@ Ask if a methodological decision is needed. Do not commit.
 ## Resume, revise, commit, and finish
 
 ```text
-Read AGENTS.md, the brief, design, plan, and run instructions. Inspect the
+Read AGENTS.md, docs/project_brief.md, docs/study_design.md,
+docs/implementation_plan.md, and the run instructions in README.md. Inspect the
 project state without changing it. Summarise progress, evidence, open issues,
 and uncommitted changes; identify the next eligible unit and wait for my choice.
 ```
@@ -82,7 +83,9 @@ update affected sections and identify work to repeat. Do not implement yet.
 ```text
 Review and commit [unit or scope], following AGENTS.md. Report incomplete
 verification before committing. Include only intended changes, grouped
-sensibly by purpose. Report commits and remaining changes. Do not push.
+sensibly by purpose. If permissions block a commit, leave the files intact
+and give me the commands to run myself. Do not widen access.
+Report commits and remaining changes. Do not push.
 ```
 
 ```text

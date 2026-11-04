@@ -5,7 +5,7 @@ description: Co-develop a research project brief, study design, or implementatio
 
 # Develop a research plan
 
-Read the project's `AGENTS.md` and existing research documents first. Work on the requested stage only; if unclear, establish the stage with the researcher. Templates are starting structures, not evidence about the project or instructions to fill unknowns by assumption.
+Read the project's `AGENTS.md` and existing research documents in `docs/` first. Treat document paths as relative to the project root; the `assets/templates/` links below are relative to this skill. Work on the requested stage only; if unclear, establish the stage with the researcher. Templates are starting structures, not evidence about the project or instructions to fill unknowns by assumption.
 
 ## Choose the relevant document
 
@@ -21,8 +21,8 @@ If a prerequisite document or agreement is missing, explain what is needed befor
 
 Ask a small number of focused questions at a time. Explain consequential options and trade-offs, recommend where justified, and let the researcher decide. Challenge unsupported assumptions. Distinguish documented facts, proposals, and open questions. Use documentation first; request permission for data inspection needed to settle a methodological question.
 
-For the design, use relevant sections rather than forcing every study into a quantitative outcome/predictor structure. For the plan, aim for units a participant could implement and verify in roughly 5–15 minutes, without mechanically splitting coherent work by file count. Specify observable checks rather than merely requiring code to run.
+For the design, use relevant sections rather than forcing every study into a quantitative outcome/predictor structure. For the plan, make each unit small enough to review in roughly 5–15 minutes; computation may take longer. Do not mechanically split coherent work by file count. Use “unit” to mean one numbered task, and explain this to the researcher. Specify observable checks rather than merely requiring code to run.
 
 Present a draft for review. Label provisional decisions, what would resolve them, and which work they block. Do not invent permissions, dataset properties, results, or completion evidence.
 
-After researcher agreement, save the requested document in the research project's `docs/` folder using its template filename, with status, date, and conditions. Remove unused guidance and explain substantive inapplicable items. Preserve unrelated content when revising. Stop at the agreed stage; do not begin analysis or commit without instruction.
+After researcher agreement, save the requested document in the research project's `docs/` folder using its template filename, with status, date, and conditions. Keep short projects short: use only relevant headings, remove unused guidance, and explain substantive inapplicable items. Do not create all three documents before they are needed. Preserve unrelated content when revising. Stop at the agreed stage; do not begin analysis or commit without instruction.

@@ -32,9 +32,9 @@ Record dependencies and versions using files appropriate for your language, such
 | [Implementation skill](.agents/skills/implement-and-verify/SKILL.md) | Guides coding, testing, debugging, and final review. |
 | `.claude/skills` | Links Claude Code to the same shared skills. |
 
-Skills give the agent a process to follow; prompts tell it what to work on next. The prompts below explicitly ask the agent to read the skill files, so they also work when automatic skill discovery is unavailable.
+Skills give the agent a process to follow; prompts tell it what to work on next. The prompts below explicitly ask the agent to read the skill files, so they also work when automatic skill discovery is unavailable. On Windows, the `.claude/skills` link may appear as a text file; these explicit-reading prompts still work. The agent needs access to the project files.
 
-Save agreed planning documents in `docs/`: `project_brief.md`, `study_design.md`, and `implementation_plan.md`. Keep open questions visible rather than filling gaps with assumptions.
+Save agreed planning documents as `docs/project_brief.md`, `docs/study_design.md`, and `docs/implementation_plan.md`. Keep open questions visible rather than filling gaps with assumptions.
 
 ## Getting started
 
@@ -60,8 +60,8 @@ Documentation is at [location or not yet available].
 
 Start by asking me a few focused questions.
 Do not inspect record-level data or write analysis code yet.
-Propose a brief for me to review. Save it in docs/ once we agree,
-rather than in the project root. Stop after completing the brief.
+Propose a brief for me to review. Save it in docs/ once we agree.
+Stop after completing the brief.
 ```
 
 ### Adapt the working instructions
@@ -90,7 +90,7 @@ Save the design in docs/ after we agree. Do not plan the coding yet.
 
 ### Make an implementation plan
 
-The implementation plan turns the agreed design into small tasks, each with a clear output and checks to confirm it works.
+The implementation plan turns the agreed design into small tasks, each with a clear output and checks to confirm it works. Each numbered task is called a “unit” in the plan and prompts.
 
 ```text
 Read AGENTS.md and .agents/skills/develop-research-plan/SKILL.md.
@@ -111,9 +111,17 @@ Implement Unit [number] only. Run its checks, record the results
 in the plan, and stop for my review. Do not commit.
 ```
 
-When all tasks are complete, rerun the analysis from the documented inputs and review the results against the study design. Ask the agent to report what it checked, any failures, and anything it could not verify.
+When all tasks are complete, rerun the analysis and review the results:
 
-The [research prompt templates](templates/research_prompts.md) include further examples for debugging, resuming work, revisions, commits, and final review. Use the `docs/` paths when referring to your planning documents.
+```text
+Read AGENTS.md and .agents/skills/implement-and-verify/SKILL.md.
+Use docs/study_design.md, docs/implementation_plan.md, and README.md
+for the final rerun and review. Preserve earlier outputs for comparison.
+Report what ran, what the checks showed, and anything you could not verify.
+Update the plan with the evidence. Do not commit or publish.
+```
+
+The [research prompt templates](templates/research_prompts.md) include further examples for debugging, resuming work, revisions, commits, and final review.
 
 ## Organising your chats
 

@@ -4,6 +4,8 @@ These are starter working instructions. Adapt the project-specific details after
 
 ## Purpose and project documents
 
+Keep the brief, study design, and implementation plan in `docs/`. Paths in these instructions are relative to the project root.
+
 The research purpose will be recorded in `docs/project_brief.md`. If it does not yet exist, help the researcher develop it before beginning analysis. When available, read `docs/study_design.md` for methodological decisions and `docs/implementation_plan.md` for the current tasks and checks. Report missing or conflicting instructions rather than inventing decisions.
 
 ## Working with the researcher
@@ -32,7 +34,7 @@ These instructions do not enforce access restrictions. Shared defaults are in `.
 - Before installing software, inspect the project's environment files and available tools. Use an existing suitable environment where possible.
 - Follow the project's declared language versions and dependencies. Do not introduce a version requirement without explaining why it is needed.
 - Establish where commands actually execute: the researcher's computer, a local virtual machine, or a cloud environment. Record the operating system, language version, dependencies, and run commands in `README.md`. Report uncertainty rather than assuming that file access implies execution on the same system.
-- Approved software download sources: [specify package registries and any language-runtime distribution sources]. Ask before downloading from unlisted sources. Software-download permission does not authorise uploading research data or override environment access controls.
+- Approved software download sources: [agree package registries and any language-runtime distribution sources during setup]. Once a source is agreed, routine package downloads from it do not need a separate permission request. Ask before using an unlisted source. Software-download permission does not authorise uploading research data or override environment access controls.
 - Keep installed environments out of Git. Record dependencies and versions using files suited to the chosen language, such as `pyproject.toml` with a lockfile, `requirements.txt`, or `renv.lock`. Do not use `environment.yml`. Use the project environment consistently for analysis and checks.
 - Do not reuse an installed environment across incompatible operating systems. When files are shared between the host and a virtual machine, keep their installed environments separate; do not overwrite the researcher's environment.
 - Report where verification ran. Execution in a virtual machine does not also verify the researcher's local setup. Document any local rerun still needed.
@@ -41,7 +43,7 @@ These instructions do not enforce access restrictions. Shared defaults are in `.
 
 - Check each implemented step against its agreed requirements, including substantive correctness.
 - Use small examples with known answers where useful; distinguish these from checks of plausibility on the supplied data.
-- Report what ran, the evidence obtained, failures, and checks not performed. Do not claim success from code inspection alone.
+- Report what ran, the evidence obtained, failures, and checks not performed. Do not claim success from code inspection alone. Keep agent checks separate from researcher review; do not mark researcher review complete without it.
 
 ## Research records
 
@@ -65,3 +67,5 @@ This guidance draws on [Feuerriegel et al. (2026), GUIDE-LLM, Table 1 and practi
 - Follow SoDa GitHub Flow: work on a short-lived branch such as `feature/short-name` and propose changes to `main` through a pull request. Use Conventional Commits (`feat:`, `fix:`, `docs:`, or `chore:`) with concise, imperative titles.
 - When asked to commit, group changes by purpose and commit them separately in a logical order. Keep relevant verification with each change; avoid splitting closely related work unnecessarily.
 - Review and stage only the intended changes. Preserve unrelated work and report any verification that remains incomplete.
+
+- If permissions block a requested commit or an instruction/settings update, preserve the work and give the researcher the changes or commands to apply manually. Do not widen access or disable restrictions to complete the task.

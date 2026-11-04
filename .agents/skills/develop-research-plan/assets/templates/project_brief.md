@@ -2,7 +2,7 @@
 
 Status: Draft / Agreed · Date: [YYYY-MM-DD]
 
-Keep this brief to about one page. Replace bracketed text; leave unknowns as open questions. Develop the detailed methods later in `docs/study_design.md`.
+Save the completed brief as `docs/project_brief.md`. Paths are relative to the project root. Keep this brief to about one page. Replace bracketed text; leave unknowns as open questions. Develop the detailed methods later in `docs/study_design.md`.
 
 ## Research intention
 
