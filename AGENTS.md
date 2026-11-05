@@ -67,5 +67,6 @@ This guidance draws on [Feuerriegel et al. (2026), GUIDE-LLM, Table 1 and practi
 - Follow SoDa GitHub Flow: work on a short-lived branch such as `feature/short-name` and propose changes to `main` through a pull request. Use Conventional Commits (`feat:`, `fix:`, `docs:`, or `chore:`) with concise, imperative titles.
 - When asked to commit, group changes by purpose and commit them separately in a logical order. Keep relevant verification with each change; avoid splitting closely related work unnecessarily.
 - Review and stage only the intended changes. Preserve unrelated work and report any verification that remains incomplete.
+- Do not add AI-agent attribution to commits, commit messages, pull requests, or other GitHub contributions. Do not include Co-Authored-By trailers, "Generated with Claude/Codex" notices, or agent signatures. Use the researcher's configured Git identity. Document AI assistance in the README as specified under Research records, not in individual Git contributions.
 
 - If permissions block a requested commit or an instruction/settings update, preserve the work and give the researcher the changes or commands to apply manually. Do not widen access or disable restrictions to complete the task.
