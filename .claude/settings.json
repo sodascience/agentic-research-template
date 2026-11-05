@@ -6,6 +6,7 @@
     "enabled": true,
     "allowUnsandboxedCommands": false,
     "failIfUnavailable": true,
+    "excludedCommands": ["gh *"],
     "network": {
       "allowedDomains": [
         "*"
