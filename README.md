@@ -55,7 +55,6 @@ Help me develop docs/project_brief.md.
 
 My initial idea is [idea].
 The intended output is [output or undecided].
-The time available is [time].
 Documentation is at [location or not yet available].
 
 Start by asking me a few focused questions.

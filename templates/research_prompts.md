@@ -14,8 +14,8 @@ Start with the [setup instructions](../README.md#getting-started). If the Claude
 
 ```text
 Use $develop-research-plan to help me develop docs/project_brief.md.
-My initial idea is [idea], intended output is [output or undecided], and
-available time is [time]. Documentation is at [location or not yet available].
+My initial idea is [idea], and intended output is [output or undecided].
+Documentation is at [location or not yet available].
 Start with focused questions; do not inspect record-level data or write
 analysis code yet. Propose a brief for review and save it after I agree.
 Stop after the brief.
