@@ -5,13 +5,13 @@ description: Implement, verify, or debug a requested research-analysis unit agai
 
 # Implement and verify research work
 
-Read `AGENTS.md`, the relevant `study_design.md` sections, and the requested unit and dependencies in `implementation_plan.md`. Inspect existing code and recorded evidence. Follow the requested mode; do not turn a verification request into permission to change analysis code.
+Treat paths as relative to the project root. Read `AGENTS.md`, the relevant `docs/study_design.md` sections, and the requested unit and dependencies in `docs/implementation_plan.md`. Inspect existing code and recorded evidence. Follow the requested mode; do not turn a verification request into permission to change analysis code.
 
 If the requested unit, required inputs, or methodological choices are missing, resolve that gap with the researcher before dependent work. Preserve the agreed scientific requirements and project access boundaries.
 
 ## Implement a unit
 
-Make a small, readable set of changes for one requested unit. Reuse existing files and protect source data. Run the agreed checks and inspect their outputs. Explain any additional check needed to address a material correctness gap. Record actual completion evidence and leave unmet criteria open. Stop after the unit.
+Make a small, readable set of changes for one requested unit. Reuse existing files and protect source data. Run the agreed checks and inspect their outputs. Explain any additional check needed to address a material correctness gap. Record actual completion evidence and leave unmet criteria open. Record work as awaiting researcher review until that review happens. Stop after the unit.
 
 ## Verify a unit
 

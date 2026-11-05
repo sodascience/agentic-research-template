@@ -2,7 +2,9 @@
 
 Status: Draft / Agreed with open questions / Agreed · Date: [YYYY-MM-DD]
 
-Based on `project_brief.md`. Replace bracketed text and label unresolved choices. This document explains the research methods; programming tasks belong in `implementation_plan.md`.
+Save the completed design as `docs/study_design.md`. Paths are relative to the project root.
+
+Based on `docs/project_brief.md`. Replace bracketed text and label unresolved choices. This document explains the research methods; programming tasks belong in `docs/implementation_plan.md`.
 
 Use the common sections below, then address the additional considerations relevant to your design. Write “Not applicable” with a short reason where appropriate. This is a starting point, not a substitute for method-specific guidance. Keep proposals, agreed decisions, and open questions distinct.
 

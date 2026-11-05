@@ -2,12 +2,14 @@
 
 Status: Draft / Agreed / Needs revision · Date: [YYYY-MM-DD]
 
-Based on `study_design.md`. Define manageable steps with observable outputs and checks. Include no implementation code. Do not resolve open methodological questions silently.
+Save the completed plan as `docs/implementation_plan.md`. Paths below are relative to the project root. A unit is one numbered task. Keep the plan proportionate to the project; use only the stages and detail needed.
+
+Based on `docs/study_design.md`. Define manageable steps with observable outputs and checks. Include no implementation code. Do not resolve open methodological questions silently.
 
 ## 1. Project overview
 
 - **Project:** [Name and brief purpose.]
-- **Study design:** [Path and agreed version or date.]
+- **Study design:** [docs/study_design.md and agreed version or date.]
 - **Language and software environment:** [Language, required software, and how the environment is recorded.]
 - **Data and documentation:** [Locations and versions; access restrictions.]
 - **Final deliverables:** [Analysis outputs and instructions for reproducing them.]
@@ -15,7 +17,7 @@ Based on `study_design.md`. Define manageable steps with observable outputs and 
 ### Working principles
 
 - Complete one requested unit at a time, in dependency order.
-- Aim for units that a participant can implement and verify in approximately 5–15 minutes. Split work that is too large to understand and review together.
+- Aim for units that can be reviewed in approximately 5–15 minutes; computation may take longer. Split work that is too large to understand and review together.
 - Give each unit one clear objective and a small, reviewable set of changes. Prefer working on one file where practical, but keep closely related implementation and verification changes together. Several units may develop the same file.
 - Keep code readable and dependencies minimal. Reuse existing work and preserve unrelated content.
 - Verify substantive correctness against the agreed requirements, not merely whether the code runs.
@@ -24,7 +26,7 @@ Based on `study_design.md`. Define manageable steps with observable outputs and 
 
 ## 2. Project organisation
 
-[Describe the minimum folders and files needed for inputs, analysis code, checks, and outputs. Specify which files belong in Git, which are generated, and how source data remain protected. Add files only when needed.]
+[Start with the layout in README.md: planning documents in docs/, notebooks in the project root, reusable code in src/, data in data/, and outputs in results/. Describe any additions, run order, which files belong in Git, and how original data remain protected.]
 
 ## 3. Implementation overview
 
@@ -79,7 +81,7 @@ Repeat the stage and unit structure below as needed. Write requirements and chec
 
 **Completion evidence**
 
-[Record commands or checks run, observed results, remaining issues, and researcher review. Record a Git checkpoint if requested and made; otherwise state that changes remain uncommitted.]
+[Keep unchecked criteria open. Distinguish agent checks from researcher review; do not mark that review complete without it. Record commands or checks run, observed results, remaining issues, and researcher review. Record a Git checkpoint if requested and made; otherwise state that changes remain uncommitted.]
 
 ## 5. Full rerun and final review
 
