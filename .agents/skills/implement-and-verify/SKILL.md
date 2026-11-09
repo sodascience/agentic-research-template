@@ -9,6 +9,13 @@ Treat paths as relative to the project root. Read `AGENTS.md`, the relevant `doc
 
 If the requested unit, required inputs, or methodological choices are missing, resolve that gap with the researcher before dependent work. Preserve the agreed scientific requirements and project access boundaries.
 
+## Check access to required tools
+
+Test if you have access to all required tools. If not, suggest safe changes to the .claude/settings.json or .codex/config.toml file (e.g. "/System/Library/OpenSSL/openssl.cnf" = "read”) and explain their level of risk. Don’t change those files directly.
+
+Ideally start a new environment (e.g. Python/R/Julia) for the project instead of re-using one. If this is not possible explain to the user how to create one.
+
+
 ## Implement a unit
 
 Make a small, readable set of changes for one requested unit. Reuse existing files and protect source data. Run the agreed checks and inspect their outputs. Explain any additional check needed to address a material correctness gap. Record actual completion evidence and leave unmet criteria open. Record work as awaiting researcher review until that review happens. Stop after the unit.
