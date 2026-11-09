@@ -31,7 +31,10 @@ These instructions do not enforce access restrictions. Shared defaults are in `.
 
 ## Software environment
 
-- Before installing software, inspect the project's environment files and available tools. Use an existing suitable environment where possible.
+- Before running code, inspect the project's environment files for the required language version, dependencies, and run commands. Check which tools are available in the current session and where commands execute.
+- Reuse a working project environment if available. Run code and checks through the project's package manager or launcher, or invoke the project environment's executable directly. Verify the runtime version and executable path before running checks. Use the same environment throughout.
+- If setup is needed, follow the project's declared versions and use approved package sources. Keep installed dependencies and local environments out of Git. If the sandbox blocks a shared cache or install directory, use a writable project-local directory when the tool supports it.
+- If the required runtime or setup tool is missing or inaccessible and setup cannot be completed in the session, document the manual setup needed give the researcher exact commands to install or configure tools where the agent can access them. Include a command to verify access from the agent session and say which checks still need to run. Preserve the project's access restrictions.
 - Follow the project's declared language versions and dependencies. Do not introduce a version requirement without explaining why it is needed.
 - Establish where commands actually execute: the researcher's computer, a local virtual machine, or a cloud environment. Record the operating system, language version, dependencies, and run commands in `README.md`. Report uncertainty rather than assuming that file access implies execution on the same system.
 - Approved software download sources: [agree package registries and any language-runtime distribution sources during setup]. Once a source is agreed, routine package downloads from it do not need a separate permission request. Ask before using an unlisted source. Software-download permission does not authorise uploading research data or override environment access controls.
