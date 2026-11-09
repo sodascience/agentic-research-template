@@ -7,9 +7,8 @@
     "allowUnsandboxedCommands": false,
     "failIfUnavailable": true,
     "network": {
-      "allowedDomains": [
-        "*"
-      ]
+      "allowedDomains": ["*"],
+      "allowLocalBinding": true
     }
   }
 }
