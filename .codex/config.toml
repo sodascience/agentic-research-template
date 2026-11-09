@@ -13,3 +13,4 @@ extends = ":workspace"
 
 [permissions.workspace-only.network]
 enabled = true
+allow_local_binding = true
