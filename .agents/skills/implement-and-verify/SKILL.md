@@ -13,7 +13,7 @@ If the requested unit, required inputs, or methodological choices are missing, r
 
 Test if you have access to all required tools. If not, suggest safe changes to the .claude/settings.json or .codex/config.toml file (e.g. "/System/Library/OpenSSL/openssl.cnf" = "read”) and explain their level of risk. Don’t change those files directly.
 
-Ideally start a new environment (e.g. Python/R/Julia) for the project instead of re-using one. If this is not possible explain to the user how to create one.
+Ideally start a new environment (e.g. Python/R/Julia) for the project instead of re-using one. If this is not possible explain to the user how to create one. If you anticipate that you will use the Browser, identify if you are able to actually open it and use it. If blocked in the sandbox, identify which command to add to the security settings file.
 
 
 ## Implement a unit
